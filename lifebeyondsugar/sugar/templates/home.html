@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1> Welcome to LifeBeyondSugar</h1>
+  <div>
+    <p><Strong>Our version</Strong></p>
+  <p>"Our vision is to empower individuals to take control of their health by educating them about the dangers of excessive sugar intake 
+      and providing them with practical tools and resources to make positive changes. 
+      We believe that everyone deserves to live a healthy and fulfilling life, free from the negative effects of sugar-related illnesses such as diabetes, obesity, and heart disease. 
+      Our website aims to be a trusted source of information, inspiration, and support for anyone looking to reduce their sugar consumption and adopt healthier habits. 
+      Through engaging content, expert advice, and community engagement, we hope to create a movement of individuals who prioritize their health and well-being." </p>
+
+  <p> 
+    <p><strong> How sugar came about  </strong></p>
+      <p> Sugar has been around for thousands of years and has undergone significant changes over time. It was first used by ancient civilizations for medicinal purposes, 
+          as it was believed to have healing properties. As the demand for sugar grew, it became a luxury item and was only available to the wealthy. With the advent of the slave trade, 
+          sugar production became more efficient and affordable, leading to a rapid increase in consumption. Today, sugar is found in almost all processed foods and is a major part of the modern diet.
+          While sugar has many uses, its overconsumption has led to a range of negative impacts on humanity. Excessive sugar intake has been linked to a range of health problems, 
+          including obesity, diabetes, heart disease, and dental decay. In addition to its impact on individual health, sugar production has also had negative social and environmental impacts. 
+          The use of slave labor in the sugar trade has had lasting effects on human rights and social justice, and the intensive farming methods used to produce sugar have led to environmental degradation and habitat destruction. 
+          It is important to educate people about the negative impacts of sugar consumption and to encourage them to adopt healthier habits to protect their health and the planet</p>
+
+  <h3> nevigate to the login and registration page to sign in</h3>
+  
+  <p>  </p>
+  <a href="{% url 'sugar:user_login' %}">login</a>
+
+  <a href="{% url 'sugar:registration' %}">registration</a> 
+
+{% endblock %}
+

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <head>
+    <title>LifeBeyondSugar - About</title>
+  </head>
+  <body>
+    <h1>About LifeBeyondSugar</h1>
+    <p>LifeBeyondSugar is a website dedicated to educating people about the negative impact of sugar and the benefits of reducing sugar intake. Our mission is to help people lead healthier 
+        and happier lives by making better dietary choices.</p>
+
+        <p>. Did you know that the average consumption is 17 teaspoons of added sugar per day?
+            . Did you know that sugary drinks are the largest source of added sugar in diet?
+            . Did you know that excessive sugar consumption has been linked to an increased risk of developing heart disease, type 2 diabetes, and certain cancers?
+            . Did you know that the World Health Organization recommends that adults limit their daily sugar intake to less than 6 teaspoons? </p>
+
+    <h2>Sugar Intake poll</h2>
+    <form method="post" action="{% url 'sugar:quiz' %}">
+      {% csrf_token %}
+      <p> Do you agree that the government should enforce law and policies that limit the availability and marketing of sugary foods and drinks 
+         which would positively help in creating an environment that supports healthier choices?</p>
+      <ul>
+        <li><input type="radio" name="question1" value="a">a. Yes</li>
+        <li><input type="radio" name="question1" value="b">b. No</li>
+      </ul>
+      <input type="submit" value="Submit">
+    </form>
+
+    <h3>Home and quiz pages</h3>
+    <p>...</p>
+    <a href="{% url 'sugar:home' %}">Home</a>
+    <a href="{% url 'sugar:quiz' %}">Quiz</a>
+
+  </body>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Register</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+  </form>
+
+  <h2> About and quiz pages</h3>
+  <p>...</p>
+  <a href="{% url 'sugar:about' %}">About</a>
+  <a href="{% url 'sugar:quiz' %}">Quiz</a>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <head>
+    <title>LifeBeyondSugar - Quiz</title>
+  </head>
+  <body>
+    <h1>Sugar Intake Quiz</h1>
+    <form method="post" action="">
+      {% csrf_token %}
+      <p>1. How many grams of added sugar per day does the World Health Organization (WHO) recommend for adults?</p>
+      <ul>
+        <li><input type="radio" name="question1" value="a">a. 25 grams</li>
+        <li><input type="radio" name="question1" value="b">b. 50 grams</li>
+        <li><input type="radio" name="question1" value="c">c. 100 grams</li>
+      </ul>
+      <p>2. What are some health risks associated with consuming too much sugar?</p>
+      <ul>
+        <li><input type="checkbox" name="question2a" value="obesity">Obesity</li>
+        <li><input type="checkbox" name="question2b" value="diabetes">Diabetes</li>
+        <li><input type="checkbox" name="question2c" value="heart disease">Heart Disease</li>
+      </ul>
+      <p>3. What are some healthy alternatives to sugary drinks?</p>
+      <ul>
+        <li><input type="checkbox" name="question3a" value="water">Water</li>
+        <li><input type="checkbox" name="question3b" value="tea">Tea</li>
+        <li><input type="checkbox" name="question3c" value="coffee">Coffee</li>
+      </ul>
+      <input type="submit" value="Submit">
+    </form>
+
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+
+    {% comment %} <a href="{% url 'sugar:user_logout' %}">logout</a> {% endcomment %}
+    <a href="{% url 'sugar:home' %}">Return to Home Page</a>
+
+
+  </body>
+{% endblock %}
