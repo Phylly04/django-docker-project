@@ -8,6 +8,7 @@ class User(models.Model):
     Represents a user entity.
 
     Fields:
+    
     - name (str): The name of the user (maximum length: 15 characters).
     - age (int): The age of the user.
     - email (str): The email address of the user.
